@@ -242,9 +242,15 @@ header .header-bottom ul {
 }
 
 .first-screen-wrapp__text .read-more {
+  height: 1.5rem;
   margin-top: 1rem;
   color: #E2B024;
   font-family: 'chocolateBox';
+  padding: initial;
+}
+
+.first-screen-wrapp__text .read-more:hover {
+  border-bottom: 1px solid #E2B024;
 }
 
 .first-screen-wrapp .wine-bg {

@@ -23,9 +23,14 @@
               font-weight: 100;
             }
             .read-more {
+                height: 1.5rem;
                 margin-top: 1rem;
                 color: $textColorSecond;
                 font-family: 'chocolateBox';
+                padding: initial;
+                &:hover {
+                    border-bottom: 1px solid $textColorSecond;
+                }
             }
         }
         .wine-bg{

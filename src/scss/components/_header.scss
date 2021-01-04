@@ -1,4 +1,7 @@
 header {
+    #titleSEO{
+        font-size: 0px;
+    }
     background-color: $darkbg;
     .header-top {
         display: flex;
@@ -20,6 +23,15 @@ header {
                     font-size: 12px;
                 }
             }
+        }
+    }
+    .header-bottom {
+        padding: 22px 0;
+        border-top: 1px solid $borderColor;
+        border-bottom: 1px solid $borderColor;
+
+        ul {
+            @include flex-sb;
         }
     }
 }

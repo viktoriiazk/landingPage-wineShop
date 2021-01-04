@@ -1,1 +1,20 @@
-/* No CSS *//*# sourceMappingURL=mixins.css.map */
+/*
+
+===== Usage ===== 
+
+p {
+    @include font-size(1, 18, 1.2);
+    // returns
+    font-size: 16px;
+    line-height: 1.5; // 18 / 12
+    letter-spacing: 0.1em;
+  }
+*/
+/* 
+  
+  ===== Usage ===== 
+
+  @include font-face(Roboto, "./assets/Roboto", normal, normal);
+
+*/
+/*# sourceMappingURL=mixins.css.map */

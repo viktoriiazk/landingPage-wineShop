@@ -1,0 +1,84 @@
+//Flex mixins
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @mixin flex-center-column {
+    @include flex-center;
+    flex-direction: column;
+  }
+  
+  @mixin flex-center-vert {
+    display: flex;
+    align-items: center;
+  }
+  
+  @mixin flex-center-horiz {
+    display: flex;
+    justify-content: center;
+  }
+
+  @mixin flex-sb {
+      display: flex;
+      justify-content: space-between;
+  }
+  //font
+
+  @mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+    font-size: $font-size * 16px;
+    
+  
+    @if $line-height==normal {
+      line-height: normal;
+    } @else {
+      line-height: $line-height / $font-size;
+    }
+  
+    @if $letter-spacing==normal {
+      letter-spacing: normal;
+    } @else {
+      letter-spacing: #{$letter-spacing / $font-size}px;
+    }
+  }
+
+/*
+
+===== Usage ===== 
+
+p {
+    @include font-size(1, 18, 1.2);
+    // returns
+    font-size: 16px;
+    line-height: 1.5; // 18 / 12
+    letter-spacing: 0.1em;
+  }
+*/
+
+
+  @mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+    @font-face {
+      font-family: quote($font-name);
+      src: url($path+".eot");
+      src: url($path+".eot?#iefix") format("embedded-opentype"), url($path+".woff")
+          format("woff"), url($path+".ttf") format("truetype"), url($path+".svg##{$font-name}")
+          format("svg");
+      font-weight: $weight;
+      font-style: $style;
+    }
+  }
+
+  /* 
+  
+  ===== Usage ===== 
+
+  @include font-face(Roboto, "./assets/Roboto", normal, normal);
+
+*/

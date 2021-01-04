@@ -1,0 +1,35 @@
+.first-screen {
+    background-color: $darkbg;
+    &-wrapp {
+        @include flex-center-column;
+        &__text {
+            max-width: 740px;
+            padding-top: 190px;
+            @include flex-center-column;
+            .subtitle {
+                @include font-size(1.5, 2, 0);
+            }
+            .title {
+                @include font-size(6, 6, 0);
+                font-weight: 100;
+                span {
+                    color: $textColorSecond;
+                }
+            }
+            .description {
+                @include font-size(1, 2, 0);
+              font-family: 'poppins';
+              text-align: center;
+              font-weight: 100;
+            }
+            .read-more {
+                margin-top: 1rem;
+                color: $textColorSecond;
+                font-family: 'chocolateBox';
+            }
+        }
+        .wine-bg{
+            display: block;
+        }
+    }
+}
